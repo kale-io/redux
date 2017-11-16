@@ -55,8 +55,7 @@ const handleRender = (req, res) => {
 // This is fired every time the server side receives a request
 app.use(handleRender)
 
-const renderFullPage = (html, preloadedState) => {
-  return `
+const renderFullPage = (html, preloadedState) => `
     <!doctype html>
     <html>
       <head>
@@ -71,7 +70,6 @@ const renderFullPage = (html, preloadedState) => {
       </body>
     </html>
     `
-}
 
 app.listen(port, (error) => {
   if (error) {
